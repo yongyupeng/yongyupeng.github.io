@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <!-- 引入我們自己寫的 CSS -->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
@@ -19,76 +19,132 @@
         <div class="jumbotron">
             <h1>找零效率化</h1>
         </div>
+        <div class="down">
 
-        <div class="form-group row">
-            <label for="example-number-input" class="col-2 col-form-label">cost($)</label>
-            <div class="col-10">
-                <input class="form-control" type="number" value="480" id="cost">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="example-number-input " class="col-20 ">選擇年份</label>
+                    <div class="col-10 ">
+                        <select>
+                    <option>2013</option>
+                    <option>2014</option>
+                    <option>2015</option>
+                    <option>2016</option>
+                    <option>2017</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="example-number-input " class="col-20 ">選擇月份</label>
+                    <div class="col-10 ">
+                        <select>
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>June</option>
+                    <option>July</option>
+                    <option>August</option>
+                    <option>September</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="example-number-input " class="col-20 ">選擇日期</label>
+                    <div class="col-10">
+                        <select>
+                    <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+                    <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+                    <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
+                    <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+                    <option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
+                    <option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
+                    <option>31</option>
+                    </select>
+                    </div>
+                </div>
+            </form>
+            <div class="form-group row has-warning">
+                <label for="example-number-input" class="col-2 col-form-label">商品名稱</label>
+                <div class="col-10">
+                    <input class="form-control" type="string" id="name">
+                </div>
             </div>
-        </div>
-
-        <div class="form-group row">
-            <label for="example-number-input" class="col-2 col-form-label">pay($)</label>
-            <div class="col-10">
-                <input class="form-control" type="number" value="1500" id="pay">
+            <hr>
+            <div class="form-group row">
+                <label for="example-number-input" class="col-2 col-form-label">cost($)</label>
+                <div class="col-10">
+                    <input class="form-control" type="number" placeholder="請輸入商品價格" id="cost">
+                </div>
             </div>
-        </div>
 
-        <button type="button" class="btn btn-primary">計算</button>
-
-        <div class="form-group row">
-            <label for="example-number-input" class="col-2 col-form-label">change($)</label>
-            <div class="col-10">
-                <input class="form-control" type="number" id="result1">
+            <div class="form-group row">
+                <label for="example-number-input" class="col-2 col-form-label">pay($)</label>
+                <div class="col-10">
+                    <input class="form-control" type="number" placeholder="請輸入實收金額" id="pay">
+                </div>
             </div>
-        </div>
 
-        <div class="form-group row">
-            <label for="example-number-input" class="col-2 col-form-label">一千元(張)</label>
-            <div class="col-10">
-                <input class="form-control" type="number" id="result2">
+            <button type="button" class="btn btn-primary">計算</button>
+            <hr>
+            <div class="form-group row">
+                <label for="example-number-input" class="col-2 col-form-label">change($)</label>
+                <div class="col-10">
+                    <input class="form-control" type="number" id="result1">
+                </div>
             </div>
-        </div>
 
-        <div class="form-group row">
-            <label for="example-number-input" class="col-2 col-form-label">五百元(張)</label>
-            <div class="col-10">
-                <input class="form-control" type="number" id="result3">
+            <div class="form-group row">
+                <label for="example-number-input" class="col-2 col-form-label">一千元(張)</label>
+                <div class="col-10">
+                    <input class="form-control" type="number" id="result2">
+                </div>
             </div>
-        </div>
 
-        <div class="form-group row">
-            <label for="example-number-input" class="col-2 col-form-label">一百元(張)</label>
-            <div class="col-10">
-                <input class="form-control" type="number" id="result4">
+            <div class="form-group row">
+                <label for="example-number-input" class="col-2 col-form-label">五百元(張)</label>
+                <div class="col-10">
+                    <input class="form-control" type="number" id="result3">
+                </div>
             </div>
-        </div>
 
-        <div class="form-group row">
-            <label for="example-number-input" class="col-2 col-form-label">五十元(個)</label>
-            <div class="col-10">
-                <input class="form-control" type="number" id="result5">
+            <div class="form-group row">
+                <label for="example-number-input" class="col-2 col-form-label">一百元(張)</label>
+                <div class="col-10">
+                    <input class="form-control" type="number" id="result4">
+                </div>
             </div>
-        </div>
 
-        <div class="form-group row">
-            <label for="example-number-input" class="col-2 col-form-label">十元(個)</label>
-            <div class="col-10">
-                <input class="form-control" type="number" id="result6">
+            <div class="form-group row">
+                <label for="example-number-input" class="col-2 col-form-label">五十元(個)</label>
+                <div class="col-10">
+                    <input class="form-control" type="number" id="result5">
+                </div>
             </div>
-        </div>
 
-        <div class="form-group row">
-            <label for="example-number-input" class="col-2 col-form-label">五元(個)</label>
-            <div class="col-10">
-                <input class="form-control" type="number" id="result7">
+            <div class="form-group row">
+                <label for="example-number-input" class="col-2 col-form-label">十元(個)</label>
+                <div class="col-10">
+                    <input class="form-control" type="number" id="result6">
+                </div>
             </div>
-        </div>
 
-        <div class="form-group row">
-            <label for="example-number-input" class="col-2 col-form-label">一元(個)</label>
-            <div class="col-10">
-                <input class="form-control" type="number" id="result8">
+            <div class="form-group row">
+                <label for="example-number-input" class="col-2 col-form-label">五元(個)</label>
+                <div class="col-10">
+                    <input class="form-control" type="number" id="result7">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="example-number-input" class="col-2 col-form-label">一元(個)</label>
+                <div class="col-10">
+                    <input class="form-control" type="number" id="result8">
+                </div>
             </div>
         </div>
     </div>
@@ -101,7 +157,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
     <!-- 引入我們自己寫的 JavaScript -->
-    <script src="index.js"></script>
+    <script src="./js/index.js"></script>
+
 </body>
 
 </html>
