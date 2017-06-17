@@ -1,6 +1,19 @@
 .jumbotron {
+    width: 930px;
+    height: 200px;
     /* 設定背景顏色 */
-    background-color: #093489;
+    /* background-color: #093489;*/
+    background-image: url('http://www.intrawallpaper.com/static/images/background-wallpapers-26_HgdHzBm.jpg');
     /* 設定文字顏色 */
-    color: white;
+    color: #f4f4f4;
+}
+
+.down {
+    width: 930px;
+    padding: 10px;
+    background-color: #f7f7f7;
+}
+
+.form-inline {
+    padding-bottom: 20px;
 }
