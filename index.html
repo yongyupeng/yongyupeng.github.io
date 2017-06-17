@@ -16,8 +16,11 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js">
     </script>
     <script type="text/javascript">
+        $(function() {
+            alert("ready event!");
+        });
         $(window).load(function() {
-            alert("Hello!歡迎使用本軟體！");
+            alert("load event!");
         });
     </script>
 </head>
